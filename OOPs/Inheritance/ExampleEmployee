@@ -1,0 +1,90 @@
+/*Question 1: Create a base class Employee with attributes name and salary.
+Create a child class Manager that adds bonus.
+Calculate total salary using inheritance.
+Asked In: Practice Assignment
+Description
+This program demonstrates single inheritance where Manager inherits from Employee.
+The child class extends functionality by adding a bonus and calculating total salary.
+
+Input
+Enter Name: Rahul
+Enter Salary: 50000
+Enter Bonus: 10000
+
+Output
+Employee Name: Rahul
+Base Salary: 50000
+Bonus: 10000
+Total Salary: 60000*/
+
+import java.util.*;
+class Employee
+{
+	private int empId;
+	
+	private String empName;
+	
+	private int salary;
+	
+	
+	public void setEmpId(int empId)
+	{
+		this.empId=empId;
+	}
+	
+	public int getEmpId()
+	{
+		return empId;
+	}
+	
+	public void setEmpName(String empName)
+	{
+		this.empName = empName;
+	}
+	public String getEmpName()
+	{
+		return empName;
+	}	
+	public void setSalary(int salary)
+	{
+		this.salary = salary;
+	}
+	public int getSalary()
+	{
+		return salary;
+	}
+	
+	//public void display()
+	//{
+	//	System.out.println(empId +" "+ empName+" "+ salary);
+	//}
+	
+}
+class ExampleEmployee
+{
+	public static void main(String x[])
+	{
+		Scanner xyz = new Scanner(System.in);
+		
+		System.out.println("Enter the id");
+		int id= xyz.nextInt();
+		
+		System.out.println("Enter Name");
+		String name = xyz.next();
+		
+		System.out.println("Enter Salary");
+		int salary = xyz.nextInt();
+		
+		Employee emp = new Employee();
+		
+		emp.setEmpId(id);
+		emp.setEmpName(name);
+		emp.setSalary(salary);
+		
+		
+		//emp.display();
+		System.out.println(emp.getEmpId() +" "+ emp.getEmpName()+" "+ emp.getSalary());
+		
+        
+	}
+}

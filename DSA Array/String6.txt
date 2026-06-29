@@ -1,0 +1,6 @@
+/*1.Print each character of a string.*/
+
+class DayString
+{
+
+}
