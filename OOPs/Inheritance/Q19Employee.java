@@ -25,17 +25,85 @@ Enter Basic Salary: 35000
 Enter HRA: 5500
 Enter DA: 3500
 Output
-Name: Rahul, Percentage: 80.0%, Grade: A
-Name: Priya, Percentage: 65.0%, Grade: B
-Name: Aman, Percentage: 35.0%, Grade: Fail*/
+Name : Suresh
+Basic Salary : 30000.0
+HRA : 5000.0
+DA : 3000.0
+Gross Salary : 38000.0
+
+Name : Meena
+Basic Salary : 40000.0
+HRA : 6000.0
+DA : 4000.0
+Gross Salary : 50000.0
+
+Name : Kiran
+Basic Salary : 35000.0
+HRA : 5500.0
+DA : 3500.0
+Gross Salary : 44000.0*/
 
 import java.util.*;
 class Employee
 {
+	String name;
+	double basicSalary;
+	void setData(String name,double basicSalary)
+	{
+		this.name = name;
+		this.basicSalary = basicSalary;
+	}
 }
 class Payroll extends Employee
 {
+	double hra;
+	double da;
+	void display(String name,double basicSalary,double hra,double da)
+	{
+		super.setData(name,basicSalary);
+		this.hra = hra;
+		this.da = da;
+	}
+	void show()
+	{
+		double grossSalary = basicSalary + hra + da;
+		System.out.println("Name: "+name);
+		System.out.println("Basic Salary: "+basicSalary);
+		System.out.println("HRA: "+hra);
+		System.out.println("DA: "+da);
+		System.out.println("Gross Salary: "+grossSalary);
+	}
 }
 class Q19Employee
 {
+	public static void main(String x[])
+	{
+		Scanner xyz = new Scanner(System.in);
+		System.out.println("Enter Number of Employees");
+		int num = xyz.nextInt();
+		
+		Payroll a[] = new Payroll[num];
+		for(int i=0;i<num;i++)
+		{
+			a[i] = new Payroll();
+			
+			System.out.println("Enter Name");
+			String name = xyz.next();
+			
+			System.out.println("Enter Basic Salary");
+			double basicSalary = xyz.nextDouble();
+			
+			System.out.println("Enter HRA");
+			double hra = xyz.nextDouble();
+			
+			System.out.println("Enter DA");
+			double da = xyz.nextDouble();
+			
+			a[i].display(name,basicSalary,hra,da);
+		}
+		for(int i=0;i<num;i++)
+		{
+			a[i].show();
+		}
+	}
 }
