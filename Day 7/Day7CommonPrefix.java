@@ -17,11 +17,11 @@ class Day7CommonPrefix
 		
 		if(str1.length()<str2.length())
 		{
-			len = str1.length();
+			len = str1.length();//first string
 		}
 		else
 		{
-			len = str2.length();
+			len = str2.length();//second string
 		}
 		String result = "";
 		
