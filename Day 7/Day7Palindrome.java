@@ -22,7 +22,6 @@ class Day7Palindrome
 				if(sub.equals(rev))
 		        {  
 			      count++;
-				  System.out.println(sub);
 		     	}
 		    }
 		
