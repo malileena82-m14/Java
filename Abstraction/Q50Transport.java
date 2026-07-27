@@ -60,23 +60,27 @@ class Q50Transport
 		System.out.println("Enter choice");
 		int choice = xyz.nextInt();
 		
-		System.out.println("Enter Distance");
-		int distance = xyz.nextInt();
-		
-		System.out.println("Enter Rate");
-		int rate = xyz.nextInt();
-		
 		Transport t;
 		
 		switch(choice)
 		{
 			case 1: 
+				System.out.println("Enter Distance");
+				int distance = xyz.nextInt();
+		
+				System.out.println("Enter Rate");
+				int rate = xyz.nextInt();
 				t = new Bus(distance,rate);
 				t.calculateFare();
 				break;
 				
 			case 2: 
-				t = new Train(distance,rate);
+				System.out.println("Enter Distance");
+				int distance1 = xyz.nextInt();
+		
+				System.out.println("Enter Rate");
+				int rate1 = xyz.nextInt();
+				t = new Train(distance1,rate1);
 				t.calculateFare();
 				break;
 				

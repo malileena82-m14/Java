@@ -75,25 +75,26 @@ class Q48Student
 	{
 		Scanner xyz = new Scanner(System.in);
 		
-		System.out.println("Type");
 		System.out.println("1.School Student");
 		System.out.println("2.College Student");
+		System.out.println("Enter choice");
 		int choice = xyz.nextInt();
-		
-		System.out.println("Marks");
-		int marks = xyz.nextInt();
 		
 		Student s;
 		
 		switch(choice)
 		{
 			case 1:
+				System.out.println("Marks");
+				int marks = xyz.nextInt();
 				s = new SchoolStudent(marks);
 				s.calculateGrade();
 				break;
 				
 			case 2:
-				s = new CollegeStudent(marks);
+				System.out.println("Marks");
+				int marks1 = xyz.nextInt();
+				s = new CollegeStudent(marks1);
 				s.calculateGrade();
 				break;
 				

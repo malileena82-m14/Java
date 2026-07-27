@@ -60,22 +60,25 @@ class Q49ElectricityBill
 		System.out.println("Enter choice");
 		int choice = xyz.nextInt();
 		
-		System.out.println("Enter Units");
-		int unit = xyz.nextInt();
-		System.out.println("Enter Rate");
-		int rate = xyz.nextInt();
-		
 		ElectricityBill e;
 		
 		switch(choice)
 		{
 			case 1: 
+				System.out.println("Enter Units");
+				int unit = xyz.nextInt();
+				System.out.println("Enter Rate");
+				int rate = xyz.nextInt();
 				e = new Domestic(unit,rate);
 				e.calculateBill();
 				break;
 				
 			case 2:
-				e = new Commercial(unit,rate);
+				System.out.println("Enter Units");
+				int unit1 = xyz.nextInt();
+				System.out.println("Enter Rate");
+				int rate1 = xyz.nextInt();
+				e = new Commercial(unit1,rate1);
 				e.calculateBill();
 				break;
 				
