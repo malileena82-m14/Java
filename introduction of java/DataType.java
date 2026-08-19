@@ -1,5 +1,4 @@
-/*
-Question 2: Write a Java program to input all basic data types (int, float, double, char, boolean) and print their values.
+/*Question 2: Write a Java program to input all basic data types (int, float, double, char, boolean) and print their values.
 Input:
 int = 10
 float = 5.5
@@ -12,10 +11,9 @@ Output:
 5.5
 99.99
 A
-true
-*/
+true*/
 
-class DataType
+/*class DataType
 {
 	public static void main(String x[])
 	{
@@ -31,4 +29,36 @@ class DataType
 		System.out.println(ch);
 		System.out.println(b);
 	}
-}		
+}*/	
+
+
+import java.util.*;
+class Datatype
+{
+	public static void main(String x[])
+	{
+		Scanner xyz = new Scanner(System.in);
+		System.out.println("Enter Integer Number");
+		int i = xyz.nextInt();
+		
+		System.out.println("Enter Float Number");
+		float f = xyz.nextFloat();
+		
+		System.out.println("Enter Double Number");
+		double d = xyz.nextDouble();
+		
+		System.out.println("Enter Character ");
+		char ch = xyz.next().charAt(0);
+		
+		System.out.println("Enter boolean");
+		boolean b = xyz.nextBoolean();
+		
+		System.out.println("Output");
+		
+		System.out.println(i);
+		System.out.println(f);
+		System.out.println(d);
+		System.out.println(ch);
+		System.out.println(b);
+	}
+}
