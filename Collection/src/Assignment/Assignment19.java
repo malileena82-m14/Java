@@ -66,8 +66,20 @@ public class Assignment19 {
 			System.out.println("Enter Amount");
 			int amount = xyz.nextInt();
 			
-			Order o = new Order(orderId,)
+			Order o = new Order(orderId,customerName,amount);
+			v.add(o);
 		}
+		System.out.println("Output");
+		int max = 0;
+		for(Order o:v)
+		{
+			if(o.getAmount()>max)
+			{
+				max =  o.getAmount();
+			}
+		}
+		System.out.println("Highest Order Amount = "+max);
+		
 	}
 
 }
