@@ -13,7 +13,7 @@ Output:
 A
 true*/
 
-/*class DataType
+class DataType
 {
 	public static void main(String x[])
 	{
@@ -29,10 +29,10 @@ true*/
 		System.out.println(ch);
 		System.out.println(b);
 	}
-}*/	
+}
 
 
-import java.util.*;
+/*import java.util.*;
 class Datatype
 {
 	public static void main(String x[])
@@ -61,4 +61,4 @@ class Datatype
 		System.out.println(ch);
 		System.out.println(b);
 	}
-}
+}*/
