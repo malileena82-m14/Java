@@ -28,14 +28,92 @@ Triangle Area: 9*/
 import java.util.*;
 abstract class Shape
 {
-
+	abstract void area();
+}
+class Circle extends Shape
+{
+	int radius;
+	Circle(int radius)
+	{
+		this.radius = radius;
+	}
+	void area()
+	{
+		double area = 3.14*radius*radius;
+		System.out.println("Area of Circle: "+area);
+	}
 }
 class Rectangle extends Shape
 {
+	int length;
+	int breadth;
+	Rectangle(int length,int breadth)
+	{
+		this.length = length;
+		this.breadth = breadth;
+	}
+	void area()
+	{
+		int area = length*breadth;
+		System.out.println("Area of Rectangle: "+area);
+	}
 }
 class Triangle extends Shape
 {
+	int base;
+	int height;
+	Triangle(int base,int height)
+	{
+		this.base = base;
+		this.height = height;
+	}
+	void area()
+	{
+		double area = 0.5 * (base * height);
+		System.out.println("Area of Triangle: "+area);
+	}
 }
 class Q102Shape
 {
+	public static void main(String x[])
+	{
+		Scanner xyz = new Scanner(System.in);
+		System.out.println("Enter Input");
+		int n = xyz.nextInt();
+		
+		Shape a[] = new Shape[n];
+		
+		for(int i=0;i<n;i++)
+		{
+			String type = xyz.next();
+			
+			if(type.equalsIgnoreCase("Circle"))
+			{
+				int radius = xyz.nextInt();
+				a[i] = new Circle(radius);
+				
+			}
+			else if(type.equalsIgnoreCase("Rectangle"))
+			{
+				int length = xyz.nextInt();
+				int breadth = xyz.nextInt();
+				
+				a[i] = new Rectangle(length,breadth);
+				
+			}
+			else if(type.equalsIgnoreCase("Triangle"))
+			{
+				int base = xyz.nextInt();
+				int height = xyz.nextInt();
+				a[i] = new Triangle(base,height);
+				
+			}
+		}
+		for(int i=0;i<n;i++)
+		{
+			a[i].area();
+		}
+		
+		
+	}
 }
