@@ -1,33 +1,41 @@
-/*Question 96: Abstract class Item with method totalPrice().
+/*Question 100: Abstract class Order.
 Asked In Practice Assignment
-Create Product class with price and quantity.
-Store in array
-Calculate total bill
+Store products in array.
+price * quantity
+Sum total
 
 Input:
-
 2
-100 2
-200 3
+Product1 100 2
+Product2 200 1
 
 Output:
-
-Total Bill: 800*/
+Total Amount: 400*/
 
 import java.util.*;
-abstract class Item
+abstract class Order
 {
-	abstract void totalPrice();
+	
 }
-class Product extends Item
+class Product extends Order
 {
+	private String name;
 	private int price;
 	private int quantity;
 	
-	Product(int price,int quantity)
+	Product(String name,int price,int quantity)
 	{
+		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
+	}
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	public String getName()
+	{
+		return name;
 	}
 	public void setPrice(int price)
 	{
@@ -37,7 +45,7 @@ class Product extends Item
 	{
 		return price;
 	}
-	public void setQuantity(int quantity)
+	public void setQuantity()
 	{
 		this.quantity = quantity;
 	}
@@ -45,13 +53,12 @@ class Product extends Item
 	{
 		return quantity;
 	}
-	void totalPrice()
+	void calculate()
 	{
-		//System.out.println(price * quantity));
+		System.out.println(price*quantity);
 	}
-	
 }
-class Q96Item
+class Q100Order
 {
 	public static void main(String x[])
 	{
@@ -63,16 +70,18 @@ class Q96Item
 		
 		for(int i=0;i<n;i++)
 		{
-			System.out.println("Enter price");
+			System.out.println("Enter Product name");
+			String name = xyz.next();
+			
+			System.out.println("Enter Price");
 			int price = xyz.nextInt();
 			
-			System.out.println("Enter quantity");
+			System.out.println("Enter Quantity");
 			int quantity = xyz.nextInt();
 			
-			a[i] = new Product(price,quantity);
+			a[i] = new Product(name,price,quantity);
 		}
 		int total = 0;
-
         for(int i = 0; i < n; i++)
         {
             total = total + (a[i].getPrice() * a[i].getQuantity());
