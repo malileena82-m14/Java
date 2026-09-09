@@ -38,7 +38,7 @@ class Q1Student
 		System.out.println("Enter Marks");
 		int marks = xyz.nextInt();
 		
-		fw.write(name+""+marks);
+		fw.write(name+" "+marks);
 		fw.close();
 		
 		System.out.println("Data Written successfully");

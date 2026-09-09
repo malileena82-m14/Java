@@ -17,4 +17,14 @@ import java.util.*;
 import java.io.*;
 class Q2Student
 {
+	public static void main(String x[])throws IOException
+	{
+		FileReader fr = new FileReader("student.txt");
+		BufferedReader br = new BufferedReader(fr);
+		
+		System.out.println("Student Data:");
+		String data = br.readLine();
+		System.out.println(data);
+		br.close();
+	}
 }
