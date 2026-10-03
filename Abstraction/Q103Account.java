@@ -25,10 +25,12 @@ Final Balance: 9000*/
 import java.util.*;
 abstract class Account
 {
-
+	abstract void deposit();
+	abstract void withdraw();
 }
 class BankAccount extends Account
 {
+	private int balance;
 }
 class Q103Account
 {

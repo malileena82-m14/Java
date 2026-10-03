@@ -3,4 +3,11 @@
 import java.util.*;
 class Q7Count
 {
+	public static void main(String x[])
+	{
+		Scanner xyz = new Scanner(System.in);
+		System.out.println("Enter Number");
+		int num = xyz.nextInt();
+		
+	}
 }
