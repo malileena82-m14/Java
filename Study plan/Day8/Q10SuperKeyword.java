@@ -11,6 +11,10 @@ class Teacher
 		this.id = id;
 		this.name = name;
 	}
+	void display()
+	{
+		System.out.println("Id : "+id+" Name : "+name);
+	}
 }
 class Student extends Teacher
 {
@@ -20,7 +24,7 @@ class Student extends Teacher
 	}
 	void display()
 	{
-		System.out.println("Id : "+id+" Name : "+name);
+		super.display();
 	}
 }
 class Q10SuperKeyword
