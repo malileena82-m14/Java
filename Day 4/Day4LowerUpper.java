@@ -8,22 +8,22 @@ class Day4LowerUpper
 		Scanner xyz = new Scanner(System.in);
 		System.out.println("Enter the Input");
 		String str = xyz.nextLine();
-		int Uppcount=0;
-		int Lowcount=0;
+		int Ucount=0;
+		int Lcount=0;
 		for(int i=0;i<str.length();i++)
 		{
 			char ch = str.charAt(i);
 			if(ch>='A' && ch<='Z')
 			{
-				Uppcount++;
+				Ucount++;
 			}
 			else if(ch>='a' && ch<='z')
 			{
-				Lowcount++;
+				Lcount++;
 			}
 		}
-		System.out.println("Uppercase Count ="+Uppcount);
-		System.out.println("Lowercase Count ="+Lowcount);
+		System.out.println("Uppercase Count ="+Ucount);
+		System.out.println("Lowercase Count ="+Lcount);
 	}
 	
 }
