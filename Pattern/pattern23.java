@@ -1,5 +1,4 @@
-/*
-Q23. Write a java program to print this pattern.   
+/*Q23. Write a java program to print this pattern.   
 #  
 # *  
 # * #  
@@ -20,15 +19,21 @@ class pattern23
 		{
 			for(int j=1;j<=5;j++)
 			{
-				if(j%2!=0 && i-j>=0)
+				if(i-j>=0 && i+j<=10)
 				{
-					System.out.print("# ");
+					if(j%2!=0)
+					{
+					    System.out.print(" #");
+				    }
+					else
+				    {
+					   System.out.print(" *");
+				    }
 				}
-				else if(j%2==0)
+				else
 				{
-					System.out.print("* ");
+				   System.out.print("  ");
 				}
-				System.out.print(" ");
 			}
 			System.out.println();
 		}

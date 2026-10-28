@@ -17,7 +17,7 @@ class Q4StringVariable
 {
 	public static void main(String x[])
 	{
-		System.out.println("Stirng Value: ");
+		System.out.println("String Value: ");
 		String s = null;
 		
 		try
